@@ -1,26 +1,27 @@
-# **Breaking Bottlenecks: Delivery Gameplan for Olist**
-Courtesy of Team Alpha (DTIDSOL-02):
-- Josephine Rahma Gunawan
-- Rio Pramana
+# Breaking Bottlenecks: Delivery Gameplan for Olist
+
+Courtesy of **Team Alpha (DTIDSOL-02)**  
+- Josephine Rahma Gunawan  
+- Rio Pramana  
 - Risma Widiya Puspadevi
 
-### About Olist 
-Olist is a *Brazilian e‑commerce technology startup, founded in **February 2015* in Curitiba by *Tiago Dalvi—spinning off from his earlier artisan‑marketplace Solidarium from 2007 ([Wikipedia][1]). It's not a traditional marketplace but operates as a **commerce enabler*: small and medium‑sized retailers upload their product catalogs to Olist’s platform, and Olist handles listings across major marketplaces like Amazon, Mercado Livre, B2W, logistics, and financial services ([Digitopia][2]).
+## About Olist
 
-### How was Olist in 2018?
+[Olist](https://pt.wikipedia.org/wiki/Olist) is a Brazilian e-commerce technology startup founded in February 2015 in Curitiba by Tiago Dalvi. It spun off from his earlier marketplace venture, Solidarium (est. 2007).  
 
-* By *2018, Olist had already secured significant **Series B funding*, fueling growth in its services beyond marketplace integrations—moving into logistics and merchant capital ([Canvas Templates for Startups][3]).
-* It was considered a promising *centaur startup* with over *12,000 retailers* connected through a single platform to 13 marketplaces, fully automating their e‑commerce operations ([Digitopia][2]).
-* Investors backing included *Redpoint eventures, 500 Startups, and notably **SoftBank Vision Fund* around 2018-2019 ([Digitopia][2]).
+Olist is not a traditional marketplace—it operates as a **commerce enabler**. Small and medium-sized retailers upload their product catalogs to Olist, which manages the listings across major marketplaces (Amazon, Mercado Livre, B2W), handles logistics, and provides financial services.
 
-So in 2018, Olist was *well past its seed stage*, entering growth mode with institutional backing, expanding its merchant network, and branching into logistics and financial tools. By 2018, Olist was still very much a “growth-first” venture-backed startup, so it’s reasonable to assume that protecting long-term customer growth and satisfaction would outweigh short-term cost optimisation.
+By 2018, Olist was:
+- Backed by **Series B venture capital**, including **SoftBank Vision Fund**, Redpoint e.ventures, and 500 Startups  
+- Supporting **12,000+ merchants** and connecting them to **13 marketplaces**  
+- Expanding its scope beyond marketplace integration into **logistics and merchant capital** services  
 
----
+In short, **2018 Olist was a growth-stage, VC-backed startup** prioritizing scale and customer retention—making it reasonable to optimize for **long-term satisfaction over short-term operational cost**.
 
-References : 
-[1]: https://pt.wikipedia.org/wiki/Olist?utm_source=chatgpt.com "Olist"
-[2]: https://digitopia.co/blog/digital-change-for-brazilians/?utm_source=chatgpt.com "Digital Change for Brazilians - Digitopia"
-[3]: https://canvasbusinessmodel.com/blogs/brief-history/olist-brief-history?srsltid=AfmBOop5ylU1kid-EtArG6DMLWqBgXxEMuYJqKMM0fxfOUDJOBX4No79&utm_source=chatgpt.com "What is Brief History of Olist Company? – CanvasBusinessModel.com"
+**Sources**:  
+- [Wikipedia: Olist](https://pt.wikipedia.org/wiki/Olist)  
+- [Digitopia – Digital Change in Brazil](https://digitopia.co/blog/digital-change-for-brazilians/)  
+- [CanvasBusinessModel – Brief History of Olist](https://canvasbusinessmodel.com/blogs/brief-history/olist-brief-history)
 
 ## **Data Analysis**
 
