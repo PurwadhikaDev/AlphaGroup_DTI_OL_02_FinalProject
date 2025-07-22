@@ -100,7 +100,7 @@ We have found that late delivery and longer delivery days have association with 
 - The platform’s On-Time Delivery (OTD) rate averaged 84.9% overall, with a high of 94.85% in 2016–2017 and 90% in 2018, indicating variability during increased volume season.
 - Order volume is negatively correlated with OTD (Spearman’s ρ = -0.63), suggesting logistical challenges scale with demand.
 - Both seller and logistics locations contribute to delays. Regional analysis shows the Northeast, including cities like Fortaleza and Salvador, experiences higher rates of late deliveries, highlighting potential infrastructure or process bottlenecks.
-- Product category influences delay: Large, seasonal, or poorly structured categories (including “unknowns”) are more likely to be late. 
+- Product category influences delay: Large, seasonal, or poorly structured categories (including "unknowns") are more likely to be late. 
 - Higher freight value, a proxy for product size or shipping distance, also correlates positively with longer delivery duration (ρ = 0.42).
 
 ![Homepage](images/Screenshot_2025-07-22_23-41-02.png)
@@ -188,8 +188,55 @@ Projected results from the test set (extrapolated to ~80k monthly orders):
 
 These improvements directly support Olist’s customer retention and NPS goals with **minimal additional cost** (e.g. small vouchers or automated messages).
 
-##### Deliverables
+## Deliverables
 - Tableau Dashboard: https://public.tableau.com/app/profile/risma.w.p./viz/OlistDeliveryPerformanceDashboard/Dashboard1#1
 ![Homepage](images/Screenshot%202025-07-22%20at%2023.04.21.png)
 - Streamlit app: https://olist-delivery-predictor-alpha-team.streamlit.app
 ![Homepage](images/Screenshot%202025-07-22%20at%2023.05.04.png)
+
+## Conclusion
+
+**From Exploratory Data Analysis (EDA):**
+Timely delivery is critical to Olist’s success. Our analysis shows that late deliveries (7.9% of all orders) correlate strongly with negative customer outcomes. Orders arriving late have a median delay of 29 days (vs 9 for on-time) and lead to significantly lower review scores (median 2 vs 5), higher incidence of 1-star ratings, and lower retention rates (2.51% vs 3.04%). Operational bottlenecks such as order surges, remote shipping destinations (e.g., Northeast Brazil), and bulky or ambiguous product categories contribute to delays. These insights confirm that delivery performance directly impacts customer satisfaction and loyalty, key business levers for Olist in 2018, a period where the company was still in aggressive growth mode.
+
+**From Machine Learning Implementation:**
+To mitigate these risks, we built a classification model to flag late deliveries before they happen. The final model achieves a recall of \~72%, meaning it correctly identifies most problematic orders. While some false positives occur (≈16% of on-time orders are mistakenly flagged), this is a reasonable tradeoff given the benefits:
+
+* Customer retention improves from 2.96% to 2.99%, leading to ≈23 extra retained customers per 80,000 orders annually.
+* Review quality increases, with \~2,800 bad reviews avoided and 0.12-point uplift in average star ratings.
+* The share of customers experiencing "late pain" drops by 72%, aligning their experience more closely with on-time buyers.
+
+These improvements, though modest in percentage terms, translate to meaningful business gains at scale. More importantly, they help Olist preserve its long-term customer relationships, an essential priority for a growth-stage startup in a highly competitive market.
+
+## Recommendation
+
+### Based on EDA
+
+**1. Optimize for High-Volume Periods**
+Order spikes reduce OTD (ρ = -0.63). Pre-allocate logistics resources during peak seasons (e.g., November) to maintain delivery performance.
+
+**2. Fix Regional Bottlenecks**
+Cities like Fortaleza and Salvador suffer consistent delays. Improve carrier reliability or invest in regional fulfillment hubs.
+
+**3. Support Underperforming Sellers**
+Seller delays lead to late deliveries. Track OTD by seller and provide training or support to improve fulfillment speed.
+
+**4. Improve Handling for Delay-Prone Products**
+Oversized or seasonal products are more often late (ρ = 0.42). Standardize packaging and set realistic delivery windows.
+
+**5. Real-Time Monitoring for High-Risk Orders**
+Orders placed at midnight show higher delay rates. Use real-time flags and alert ops teams to prevent issues.
+
+**6. Retain First-Time Customers**
+Late first orders hurt retention (2.51% vs 3.04%). For high-risk cases, proactively inform the customer and offer small vouchers if needed.
+
+### Based on Machine Learning
+
+**1. Proactive ETA Notification**
+Immediately notify customers of high-risk orders to prevent surprise and frustration. Reduces negative reviews (−576 1★ reviews).
+
+**2. Voucher Compensation for Late Orders**
+Send a R\$5–10 voucher if a flagged order ends up late. Helps recover trust and improves retention (+23 customers/year). Total cost ≈ R\$6,300/year.
+
+**3. Dynamic ETA Recalibration**
+Use prediction probability to shift delivery estimates (e.g., 4–7 days -> 5–9 days) to better manage expectations.
