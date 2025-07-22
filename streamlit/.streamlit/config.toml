@@ -1,0 +1,14 @@
+[global]
+pythonVersion = "3.10"
+
+[server]
+headless = true
+enableCORS = false
+enableXsrfProtection = false
+
+[theme]            
+primaryColor = "#0092C2"             
+backgroundColor = "#1D1D1B"          
+secondaryBackgroundColor = "#001B4E" 
+textColor = "#FFFFFF"                
+font = "sans serif"
