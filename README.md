@@ -90,3 +90,8 @@ We have found that late delivery and longer delivery days have association with 
 Here, we want to 
 ##### Futures Engineering 
 ##### Model Building 
+##### Deliverables
+- Tableau Dashboard: https://public.tableau.com/app/profile/risma.w.p./viz/OlistDeliveryPerformanceDashboard/Dashboard1#1
+![Homepage](images/Screenshot%202025-07-22%20at%2023.04.21.png)
+- Streamlit app: https://olist-delivery-predictor-alpha-team.streamlit.app
+![Homepage](images/Screenshot%202025-07-22%20at%2023.05.04.png)
