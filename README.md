@@ -109,9 +109,29 @@ We have found that late delivery and longer delivery days have association with 
 - Payment method and use of installments do not show significant associations with late delivery.
 
 
-## **Machine Learning**
-Aim : to create a machine learning model that can predict an order will be delivered late or not
-##### Futures Engineering 
+## Machine Learning: Predicting Late Deliveries
+
+### 1. Problem Framing
+
+The machine learning objective is to build a **binary classifier** that predicts whether an order will be **delivered late (1)** or **on time (0)** using only the information available **at checkout & approval**.
+
+This enables Olist to **take early action** on high-risk orders, such as adjusting the delivery estimate, sending proactive notifications, or issuing small vouchers to preserve customer trust.
+
+Given the **class imbalance** (~8% of orders are late), we optimized for **PR-AUC** and prioritized **recall** to minimize missed late deliveries, which are more damaging to business than false alarms.
+
+### 2. Modeling Approach
+
+We tested and benchmarked several models.
+The best performing model was **Random Forest**, which was selected for final deployment based on its:
+
+- Robustness to outliers and mixed data types
+- Competitive PR-AUC
+- Strong recall under a custom F2 threshold
+
+### 3. Feature Engineering
+
+Features were created from multiple joined datasets (orders, items, sellers, customers, reviews, etc.).
+
 We have built new features engineering : 
 1. purchase_to_approve_hrs                 
 2. approve_to_estimated_days               
@@ -133,7 +153,40 @@ We have built new features engineering :
  18. seller_90d_dispatch_late_rate_smoothed  
  19. seller_90d_order_count 
 
-##### Model Building 
+We used one-hot encoding for categorical features and RobustScaler for skewed numeric fields. Correlated features (e.g. seller_30d vs 90d count) were reviewed to reduce redundancy.
+
+### 4. Model Selection & Evaluation
+
+The final model is a **Random Forest Classifier**, tuned with a custom parameter blend. Key results on the **test set (21,987 rows)**:
+
+| Metric                    | Value     |
+|---------------------------|-----------|
+| PR-AUC                    | 0.517     |
+| Accuracy                  | 82.9%     |
+| Recall (Late)             | 72.3%     |
+| Precision (Late)          | 27.8%     |
+| Threshold (F₂ optimized)  | 0.109     |
+
+At this threshold, the model:
+
+- **Captured 1,259 of 1,742 late deliveries (TP)**  
+- **Missed 483 late deliveries (FN)**  
+- **Incorrectly flagged 3,268 on-time orders (FP)**
+
+The threshold was chosen using **F₂-score optimization** to prioritize recall, in line with Olist’s 2018 business goal of protecting long-term growth and customer satisfaction.
+
+### 5. Business Impact
+
+Projected results from the test set (extrapolated to ~80k monthly orders):
+
+| KPI                          | Before Model | After Model | Improvement       |
+|-----------------------------|--------------|-------------|-------------------|
+| Late experience rate        | 7.92%        | 2.20%       | −5.7 pts (−72.3%) |
+| 1-star review share         | 10.1%        | 7.5%        | −2.6 pts (−25.8%) |
+| Average rating              | 4.13         | 4.25        | +0.12             |
+| Retained customers (est.)   | +651         | +657        | +6 customers      |
+
+These improvements directly support Olist’s customer retention and NPS goals with **minimal additional cost** (e.g. small vouchers or automated messages).
 
 ##### Deliverables
 - Tableau Dashboard: https://public.tableau.com/app/profile/risma.w.p./viz/OlistDeliveryPerformanceDashboard/Dashboard1#1
