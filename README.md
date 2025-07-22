@@ -4,7 +4,27 @@ Courtesy of Team Alpha (DTIDSOL-02):
 - Rio Pramana
 - Risma Widiya Puspadevi
 
-Understanding the Business Problems**
+### About Olist 
+Olist is a *Brazilian e‑commerce technology startup, founded in **February 2015* in Curitiba by *Tiago Dalvi—spinning off from his earlier artisan‑marketplace Solidarium from 2007 ([Wikipedia][1]). It's not a traditional marketplace but operates as a **commerce enabler*: small and medium‑sized retailers upload their product catalogs to Olist’s platform, and Olist handles listings across major marketplaces like Amazon, Mercado Livre, B2W, logistics, and financial services ([Digitopia][2]).
+
+### How was Olist in 2018?
+
+* By *2018, Olist had already secured significant **Series B funding*, fueling growth in its services beyond marketplace integrations—moving into logistics and merchant capital ([Canvas Templates for Startups][3]).
+* It was considered a promising *centaur startup* with over *12,000 retailers* connected through a single platform to 13 marketplaces, fully automating their e‑commerce operations ([Digitopia][2]).
+* Investors backing included *Redpoint eventures, 500 Startups, and notably **SoftBank Vision Fund* around 2018-2019 ([Digitopia][2]).
+
+So in 2018, Olist was *well past its seed stage*, entering growth mode with institutional backing, expanding its merchant network, and branching into logistics and financial tools. By 2018, Olist was still very much a “growth-first” venture-backed startup, so it’s reasonable to assume that protecting long-term customer growth and satisfaction would outweigh short-term cost optimisation.
+
+---
+
+References : 
+[1]: https://pt.wikipedia.org/wiki/Olist?utm_source=chatgpt.com "Olist"
+[2]: https://digitopia.co/blog/digital-change-for-brazilians/?utm_source=chatgpt.com "Digital Change for Brazilians - Digitopia"
+[3]: https://canvasbusinessmodel.com/blogs/brief-history/olist-brief-history?srsltid=AfmBOop5ylU1kid-EtArG6DMLWqBgXxEMuYJqKMM0fxfOUDJOBX4No79&utm_source=chatgpt.com "What is Brief History of Olist Company? – CanvasBusinessModel.com"
+
+## **Data Analysis**
+
+**Understanding the Business Problems**
 
 ### Background and Business Objective
 
@@ -66,4 +86,7 @@ We have found that late delivery and longer delivery days have association with 
 - Payment method and use of installments do not show significant associations with late delivery.
 
 
-### Machine Learning 
+## **Machine Learning**
+Here, we want to 
+##### Futures Engineering 
+##### Model Building 
