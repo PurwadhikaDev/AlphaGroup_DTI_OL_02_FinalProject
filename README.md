@@ -9,14 +9,14 @@ Courtesy of **Team Alpha (DTIDSOL-02)**
 
 [Olist](https://pt.wikipedia.org/wiki/Olist) is a Brazilian e-commerce technology startup founded in February 2015 in Curitiba by Tiago Dalvi. It spun off from his earlier marketplace venture, Solidarium (est. 2007).  
 
-Olist is not a traditional marketplace—it operates as a **commerce enabler**. Small and medium-sized retailers upload their product catalogs to Olist, which manages the listings across major marketplaces (Amazon, Mercado Livre, B2W), handles logistics, and provides financial services.
+Olist is not a traditional marketplace, it operates as a **commerce enabler**. Small and medium-sized retailers upload their product catalogs to Olist, which manages the listings across major marketplaces (Amazon, Mercado Livre, B2W), handles logistics, and provides financial services.
 
 By 2018, Olist was:
 - Backed by **Series B venture capital**, including **SoftBank Vision Fund**, Redpoint e.ventures, and 500 Startups  
 - Supporting **12,000+ merchants** and connecting them to **13 marketplaces**  
 - Expanding its scope beyond marketplace integration into **logistics and merchant capital** services  
 
-In short, **2018 Olist was a growth-stage, VC-backed startup** prioritizing scale and customer retention—making it reasonable to optimize for **long-term satisfaction over short-term operational cost**.
+In short, **2018 Olist was a growth-stage, VC-backed startup** prioritizing scale and customer retention, making it reasonable to optimize for **long-term satisfaction over short-term operational cost**.
 
 **Sources**:  
 - [Wikipedia: Olist](https://pt.wikipedia.org/wiki/Olist)  
@@ -38,9 +38,15 @@ E-commerce has rapidly transformed how people shop, especially in Brazil, where 
 
 The fact that *delivery time* ranks second highlights just how important a fast, reliable shipping experience is to customers (nearly as important as pricing itself).
 
-For **Olist**, a major e-commerce platform that connects small and medium-sized retailers to marketplaces in Brazil, this puts increasing pressure on fulfilment operations. Delivery performance isn’t just a logistical concern. It's a business-critical metric that can influence customer satisfaction, retention, and ultimately, sales performance.
+For **Olist**, a startup in 2018 still in its aggressive growth phase after securing **Series B funding** (with backing from SoftBank, Redpoint e.ventures, and 500 Startups), this is a critical threat. At that point, Olist had:
 
-##### Why Focus on On-Time Delivery (OTD)?
+- A low **customer retention rate** of just **3%**
+- A rising **late delivery rate** that exceeded the commonly accepted benchmark of 5%
+- A high volume of **negative reviews** directly tied to lateness
+
+This meant that every failed delivery was a **lost growth opportunity** and **damage to long-term customer value**. As a startup prioritizing **scale and customer experience over short-term cost**, Olist needed a solution to protect its reputation and maximize retention, even if the underlying logistics couldn’t be fully fixed.
+
+#### Why Focus on On-Time Delivery (OTD)?
 
 To evaluate delivery performance, we focus on the industry-standard metric: **On-Time Delivery (OTD)**. OTD measures the percentage of orders delivered within the promised timeframe and is calculated as:
 
@@ -52,7 +58,13 @@ Importantly, a survey by **Reclame Aqui** showed that **18.6% of consumers aband
 
 Furthermore, an article by **[Gazeta do Povo](https://www.gazetadopovo.com.br/economia/e-commerce-brasileiro-busca-alternativas-a-correiodependencia-an1xq7tj25k1nnxytsml2tb4q/)** noted that logistics companies proudly advertise achieving **95% OTD** as a sign of operational excellence. While not a formal industry standard, this 95% mark is widely regarded as a benchmark for competitive performance in Brazil’s e-commerce landscape.
 
-##### Project Objective
+E-commerce giants typically operate at **95% On-Time Delivery Rate (OTDR)**. In contrast, Olist’s OTDR dropped to as low as nearly **80% in 2018**, especially in high-volume periods. At this level:
+
+- **7.92% of orders are late**
+- **Late deliveries are 3x more likely to receive a 1-star review**
+- **18% of customers are less likely to reorder after a late experience**
+
+### Project Objective
 
 Given the critical role that delivery time plays in consumer satisfaction and conversion rates, the objective of this project is to:
 
@@ -60,9 +72,15 @@ Given the critical role that delivery time plays in consumer satisfaction and co
 
 In addition to descriptive and diagnostic analysis, this project also leverages **machine learning to predict whether a delivery will be late or on time** based on various features available at the time of order. The goal is to take **preventive action** on high-risk deliveries such as prioritising processing or flagging for courier follow-up before issues occur.
 
-Through data-driven insights and predictive modelling, this project aims to help Olist optimise its logistics performance, meet customer expectations, and improve overall business outcomes.
+> **The Machine Learning solution aims to improve Olist's delivery performance by predicting which orders are at risk of being delivered late, allowing the company to take proactive action to reduce dissatisfaction, negative reviews, and churn.**
 
-### Sumary of Exploratory Data Analysis 
+Rather than attempting to fix the physical delivery system (which Olist might not fully control), the solution focuses on **early detection and mitigation**, such as notifying customers, recalibrating expectations, and offering small compensations where appropriate.
+
+The model’s business value lies in **turning a potentially negative experience into a neutral or even positive one**, without waiting for the damage to happen.
+
+So, through data-driven insights and predictive modelling, this project aims to help Olist optimise its logistics performance, meet customer expectations, and improve overall business outcomes.
+
+### Summary of Exploratory Data Analysis 
 The EDA reveals several key associations and patterns : 
 
 We have found that late delivery and longer delivery days have association with customer's satisfaction that result in bad review scores. Also, this will impact the brand and business evaluation including potential income revenue of the Olist, since late delivary has association with lowe customer retention rate. 
