@@ -106,6 +106,9 @@ We have found that late delivery and longer delivery days have association with 
 ![Homepage](images/Screenshot%202025-07-22%20at%2023.41.02.png)
 
 - Order timestamp an holidays: Orders placed at midnight show a spike in late deliveries; meanwhile holidays themselves do not significantly increase delay risk, though order volume increases prior to major holidays.
+
+![Homepage](images/Screenshot%202025-07-22%20at%2023.46.34.png)
+
 - Payment method and use of installments do not show significant associations with late delivery.
 
 
