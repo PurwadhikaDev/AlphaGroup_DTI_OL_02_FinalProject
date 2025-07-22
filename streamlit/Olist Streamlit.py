@@ -59,7 +59,7 @@ def read_olist_csv(path):
     return pd.read_csv(path, parse_dates=parse_dates)
 
 # Load dataset:
-df = read_olist_csv('../data/cleaned_data/olist_ml_ready_dataset.csv')
+df = read_olist_csv('/Users/rismawidiya01/Desktop/AlphaGroup_DTI_OL_02_FinalProject/data/cleaned_data/olist_ml_ready_dataset.csv')
 
 # Split features and target:
 X = df.drop(columns=['is_late'])
@@ -69,7 +69,7 @@ y = df['is_late']
 X_train, y_train = X, y
 
 # Load pipeline:
-model_pipeline = joblib.load('best_rf_pipeline.pkl')
+model_pipeline = joblib.load('/Users/rismawidiya01/Desktop/AlphaGroup_DTI_OL_02_FinalProject/models/best_rf_pipeline.pkl')
 
 # Sidebar navigation for multipage:
 with st.sidebar:
@@ -347,19 +347,29 @@ def disclaimer():
     st.markdown("### Model Limitations")
 
     st.markdown("""
-    > - **No Real-Time Factors**  
-    The model doesn't account for real-time issues like traffic, weather, or sudden carrier strikes.
+    > **Data Quality and Availability**  
+    - Missing or incorrect data could reduce the reliability of the machine learning model.  
+    - Other predictors, such as real-time logistics data (provider name, weather, traffic, infrastructure, courier delay), that are not available can limit the predictive power.
 
-    > - **Historical Bias**  
-    Predictions are based on past behaviour. New sellers or recent policy changes may not be reflected accurately.
+    > **Confusion Matrix and Performance Limitations**
+    >  
+    **Key Insights:**
+    >
+    - **False Negatives:**  
+        - The model fails to alert on genuine late deliveries.  
+        - Customers remain dissatisfied, resulting in complaints and lower retention.
+    > 
+    - **False Positives:**  
+        - Waste of resources on unnecessary interventions.  
+        - Potentially alienates sellers or logistics partners by imposing undue pressure.
 
-    > - **Ethical Use**  
-    Model outputs should support human decision-making, not replace it. Use results to inform strategy, not penalise sellers directly without review.
-    """)
+    > **Temporal Drift and Model Staleness**  
+    - Customer behaviour, seller reliability, and logistics processes constantly evolve.  
+    - Without regular retraining and monitoring, the model's accuracy will degrade over time.
 
-    st.markdown("### Final Note")
-    st.markdown("""
-    These insights and actions are **model-guided**, not deterministic. Continuous monitoring, human judgment, and A/B testing are essential to refine performance over time.
+    > **Ethical and Fairness Considerations**  
+    - Risk of bias against certain sellers or regions.  
+    - Sellers unfairly flagged as problematic might experience negative financial impacts or reduced sales, potentially damaging partnerships.
     """)
 
 # Page router:
