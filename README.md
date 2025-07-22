@@ -87,9 +87,31 @@ We have found that late delivery and longer delivery days have association with 
 
 
 ## **Machine Learning**
-Here, we want to 
+Aim : to create a machine learning model that can predict an order will be delivered late or not
 ##### Futures Engineering 
+We have built new features engineering : 
+1. purchase_to_approve_hrs                 
+2. approve_to_estimated_days               
+3. approve_to_shipping_limit_days           
+4. purchase_hour                            
+5. purchase_dow                             
+6. purchase_month                          
+7. is_weekend                              
+ 8. is_brazil_holiday                       
+ 9. distance_km                             
+ 10.  same_state                              
+ 11. freight_ratio                           
+ 12. customer_is_remote                      
+ 13. seller_dispatch_hub                     
+ 14. seller_30d_dispatch_late_rate_raw       
+ 15. seller_30d_dispatch_late_rate_smoothed  
+ 16. eller_30d_order_count                  
+ 17. seller_90d_dispatch_late_rate_raw       
+ 18. seller_90d_dispatch_late_rate_smoothed  
+ 19. seller_90d_order_count 
+
 ##### Model Building 
+
 ##### Deliverables
 - Tableau Dashboard: https://public.tableau.com/app/profile/risma.w.p./viz/OlistDeliveryPerformanceDashboard/Dashboard1#1
 ![Homepage](images/Screenshot%202025-07-22%20at%2023.04.21.png)
