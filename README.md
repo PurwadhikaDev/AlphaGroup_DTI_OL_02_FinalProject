@@ -102,6 +102,9 @@ We have found that late delivery and longer delivery days have association with 
 - Both seller and logistics locations contribute to delays. Regional analysis shows the Northeast, including cities like Fortaleza and Salvador, experiences higher rates of late deliveries, highlighting potential infrastructure or process bottlenecks.
 - Product category influences delay: Large, seasonal, or poorly structured categories (including “unknowns”) are more likely to be late. 
 - Higher freight value, a proxy for product size or shipping distance, also correlates positively with longer delivery duration (ρ = 0.42).
+
+![Homepage](images/Screenshot_2025-07-22_23-41-02.png)
+
 - Order timestamp an holidays: Orders placed at midnight show a spike in late deliveries; meanwhile holidays themselves do not significantly increase delay risk, though order volume increases prior to major holidays.
 - Payment method and use of installments do not show significant associations with late delivery.
 
