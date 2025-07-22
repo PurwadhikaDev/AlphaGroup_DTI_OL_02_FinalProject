@@ -83,8 +83,9 @@ So, through data-driven insights and predictive modelling, this project aims to 
 ### Summary of Exploratory Data Analysis 
 The EDA reveals several key associations and patterns : 
 
-We have found that late delivery and longer delivery days have association with customer's satisfaction that result in bad review scores. Also, this will impact the brand and business evaluation including potential income revenue of the Olist, since late delivary has association with lowe customer retention rate. 
+We have found that late delivery and longer delivery days have association with customer's satisfaction that result in bad review scores. Also, this will impact the brand and business evaluation including potential income revenue of the Olist, since late delivary has association with lower customer retention rate.
 
+![Homepage](images/output.png)
 
 **1. Delivery Performance, Customer Satisfaction, and Retention**
 - From all orders, the late delivery and on-time delivery percentage is 7.92% vs 92.08%, respectively. 
